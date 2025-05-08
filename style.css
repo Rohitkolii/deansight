@@ -249,8 +249,8 @@ ul li{
 
 .demoinner .demoimg img{
     width: 100%;
-    height: 350px;
-    object-fit: cover;
+    height: 380px;
+    /* object-fit: cover; */
     border-radius: 12px;
 }
 
@@ -649,15 +649,6 @@ ul li{
         border-radius: 12px;
       } */
 
-      .imggrid{
-        width: 100%;
-        margin: 50px auto;
-      }
-
-      .imggrid img{
-        width: 100%;
-      }
-
   /* footer  */
 
 
@@ -856,6 +847,13 @@ footer .footer1{
     .demoinner{
         grid-template-columns: repeat(1, 1fr);
         
+    }
+
+    .demoinner .demoimg img{
+        width: 100%;
+        height: 100%;
+        /* object-fit: cover; */
+        border-radius: 12px;
     }
     
     .certifiedinner{
