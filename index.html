@@ -334,9 +334,9 @@
             <h4>Book a Free IELTS Demo</h4>
             <p>100% secured and confidential</p> <br>
             <form onsubmit="sendMail(event)">
-                <input placeholder="Full name" type="text" id="name">
-                <input placeholder="Email" type="email" id="email">
-                <input placeholder="Phone" type="text" id="phone">
+                <input required placeholder="Full name" type="text" id="name">
+                <input required placeholder="Email" type="email" id="email">
+                <input required placeholder="Phone" type="text" id="phone">
                 <select id="course">
                     <option disabled selected>--purpose--</option>
                     <option value="IELTS Online Coaching">IELTS Online Coaching</option>
@@ -597,14 +597,14 @@
 
 <div class="formo" id="formo">
     <h4>Book a Free IELTS Demo <img onclick="closeform()" src="images/icons/close.svg" alt=""></h4>
-    <form>
-        <input placeholder="Full name" type="text" name="" id="">
-        <input placeholder="Email" type="email" name="" id="">
-        <input placeholder="Phone" type="text" name="" id="">
-        <select>
-            <option disabled>--purpose--</option>
-            <option value="">IELTS Online Coaching</option>
-            <option value="">IELTS Classroom Coaching in Noida</option>
+    <form onsubmit="sendMail(event)">
+        <input placeholder="Full name" required type="text"  id="name">
+        <input placeholder="Email" required type="email" id="email">
+        <input placeholder="Phone" required type="text" id="phone">
+        <select id="course" required>
+            <option disabled selected>--purpose--</option>
+            <option value="IELTS Online Coaching">IELTS Online Coaching</option>
+            <option value="IELTS Classroom Coaching in Noida">IELTS Classroom Coaching in Noida</option>
         </select>
         <button  style="width: 100%;">Submit</button>
     </form>
@@ -670,7 +670,10 @@ function closeform(){
             course : document.getElementById("course").value,
         }
         emailjs.send("service_unk70pt", "template_v87808p", params)
-      .then(() => {
+        .then(() => {
+          name : document.getElementById("name").value = ""
+          email : document.getElementById("email").value = ""
+          phone : document.getElementById("phone").value = ""
         alert("Email Sent Successfully!");
       })
       .catch((error) => {
