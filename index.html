@@ -15,7 +15,7 @@
         <script type="text/javascript">
         (function(){
             emailjs.init({
-                publicKey: "EoRqXeN9WXwvaf8lr",
+                publicKey: "IH9bMYfsknePnBnoU",
             });
         })();
 </script>
@@ -338,7 +338,7 @@
                 <input required placeholder="Email" type="email" id="email">
                 <input required placeholder="Phone" type="text" id="phone">
                 <select id="course">
-                    <option disabled selected>--purpose--</option>
+                    <option value="none" disabled selected>--purpose--</option>
                     <option value="IELTS Online Coaching">IELTS Online Coaching</option>
                     <option value="IELTS Classroom Coaching in Noida">IELTS Classroom Coaching in Noida</option>
                 </select>
@@ -534,25 +534,6 @@
     </div>
 </section>
 
-<!-- griddddd -->
-
-<!-- <div class="grid-container">
-    <div class="grid-item item1">
-      <img src="images/vdo.jpeg" alt="Study Abroad">
-    </div>
-    <div class="grid-item item2">
-        <img src="images/vdo.jpeg" alt="Study Abroad">
-    </div>
-    <div class="grid-item item3">
-        <img src="images/vdo.jpeg" alt="Study Abroad">
-    </div>
-    <div class="grid-item item4">
-        <img src="images/vdo.jpeg" alt="Study Abroad">
-    </div>
-  </div> -->
-
-<!-- footer -->
-
 <footer>
     <div class="innerfooter">
         <div class="footer1">
@@ -597,16 +578,16 @@
 
 <div class="formo" id="formo">
     <h4>Book a Free IELTS Demo <img onclick="closeform()" src="images/icons/close.svg" alt=""></h4>
-    <form onsubmit="sendMail(event)">
-        <input placeholder="Full name" required type="text"  id="name">
-        <input placeholder="Email" required type="email" id="email">
-        <input placeholder="Phone" required type="text" id="phone">
-        <select id="course" required>
-            <option disabled selected>--purpose--</option>
+    <form onsubmit="sendMail2(event)">
+        <input placeholder="Full name" required type="text"  id="name2">
+        <input placeholder="Email" required type="email" id="email2">
+        <input placeholder="Phone" required type="text" id="phone2">
+        <select id="course2">
+            <option  value="none" disabled selected>--purpose--</option>
             <option value="IELTS Online Coaching">IELTS Online Coaching</option>
             <option value="IELTS Classroom Coaching in Noida">IELTS Classroom Coaching in Noida</option>
         </select>
-        <button  style="width: 100%;">Submit</button>
+        <button type="submit"  style="width: 100%;">Submit</button>
     </form>
   </div>
 
@@ -669,17 +650,47 @@ function closeform(){
             phone : document.getElementById("phone").value,
             course : document.getElementById("course").value,
         }
-        emailjs.send("service_unk70pt", "template_v87808p", params)
+        if(params.course == 'none'){
+            alert("Select Course!")
+        }else{
+        emailjs.send("service_3h989fq", "template_ihm6zcp", params)
         .then(() => {
-          name : document.getElementById("name").value = ""
-          email : document.getElementById("email").value = ""
-          phone : document.getElementById("phone").value = ""
+          document.getElementById("name").value = ""
+          document.getElementById("email").value = ""
+          document.getElementById("phone").value = ""
         alert("Email Sent Successfully!");
       })
       .catch((error) => {
         alert("Failed to send email.");
         console.error("EmailJS Error:", error);
       });
+    }
+    }
+
+    function sendMail2(e){
+        e.preventDefault();
+        let params = {
+            name : document.getElementById("name2").value,
+            email : document.getElementById("email2").value,
+            phone : document.getElementById("phone2").value,
+            course : document.getElementById("course2").value,
+        }
+        if(params.course == 'none'){
+            alert("Select Course!")
+        }else{
+        emailjs.send("service_3h989fq", "template_ihm6zcp", params)
+        .then(() => {
+          document.getElementById("name2").value = ""
+          document.getElementById("email2").value = ""
+          document.getElementById("phone2").value = ""
+        alert("Email Sent Successfully!");
+        closeform();
+      })
+      .catch((error) => {
+        alert("Failed to send email.");
+        console.error("EmailJS Error:", error);
+      });
+    }
     }
 </script>
 </html>
