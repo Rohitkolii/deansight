@@ -278,9 +278,13 @@ ul li{
 
 /* course  */
 .course{
+    width: 100%;
+    padding: 50px 0;
+    background: linear-gradient(to bottom,white, #5e3aee36);
+}
+.courseinner{
     width: 85%;
     margin: auto;
-    padding: 50px 0;
   }
   
   .course .row{
@@ -463,6 +467,7 @@ ul li{
   .faq{
       width: 85%;
       margin: auto;
+      padding-top: 50px;
   }
 
   .faqinner{
@@ -617,38 +622,6 @@ ul li{
         margin-bottom: 30px;
     }
 
-    /* .//////////////// */
-    /* .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto;
-        gap: 20px;
-        padding: 40px;
-        max-width: 1000px;
-        margin: auto;
-      }
-      
-      .item1{
-        transform: translate(-20px,20px);
-      }
-      .item2{
-        transform: translate(-20px,-20px);
-      }
-        .item3{
-        transform: translate(20px,20px);
-        }
-      .item4{
-        transform: translate(20px,-20px);
-      } 
-      
-      .grid-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        border-radius: 12px;
-      } */
-
   /* footer  */
 
 
@@ -787,7 +760,7 @@ footer .footer1{
         gap: 10px;
     }
     
-    .course{
+    .courseinner{
         width: 85%;
     }
     
@@ -958,7 +931,7 @@ footer .footer1{
     }
 
     nav{
-        padding: 10px 30px;
+        padding: 10px 10px;
         background-color: white;
     }
 
@@ -1007,6 +980,7 @@ footer .footer1{
 
 @media only screen and (max-width:600px){
 
+
     .innerheader{
         gap: 10px;
     }
@@ -1019,12 +993,17 @@ footer .footer1{
         /* justify-content: space-evenly; */
       }
       .div2_1{
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
           gap: 10px;
           justify-content: center;
           justify-content: center;
   }   
+
+  .squarefull{
+    grid-column: 1 / 3; /* spans both columns */
+  }
 
   .square_sub{
     background-color: white;
@@ -1056,7 +1035,7 @@ header ul{
     margin-bottom: 50px;
 }
 
-.innerheader,.details,.democon,.certifiedinner, .course, .faq,.features,.testimonialinner, .innerfooter{
+.innerheader,.details,.democon,.certifiedinner, .courseinner, .faq,.features,.testimonialinner, .innerfooter{
     width: 95%;
 }
 
@@ -1100,5 +1079,14 @@ header ul{
     width: 95%;
     display: none;
   }
+
+  .extra{
+    padding: 15px;
+  }
+
+  .extra h4:nth-child(2){
+    font-size: 15px;
+}
+  
 
 }
