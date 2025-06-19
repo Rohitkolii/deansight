@@ -60,11 +60,13 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 100px;
+    padding: 15px 100px;
     position: sticky;
     top: 0;
     z-index: 9;
     background-color: white;
+    /* background-color: #161179; */
+    /* background-color: red; */
 }
 
 nav img{
@@ -74,9 +76,20 @@ nav span{
     color: white;
 }
 
-header button, .btn b, nav a, .democon a, .faq button, .formo button, .footbtn button, .democon button, .thanksinner a, .Lecturesinner button{
+.btn b, nav a, .democon a, .faq button, .formo button, .footbtn button, .democon button, .thanksinner a, .Lecturesinner button{
     background-color: var(--primary);
     padding: 20px 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 12px;
+    border: transparent;
+    cursor: pointer;
+}
+
+.btn2 button{
+  background-color: red;
+    padding: 18px 25px;
     color: white;
     text-decoration: none;
     font-weight: 600;
@@ -100,10 +113,12 @@ nav a{
 /* header  */
 header{
     /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #2c56fe35); */
-    background: linear-gradient(to bottom, #fff, #2c56fe53), url('https://images.unsplash.com/photo-1462536943532-57a629f6cc60?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGVkdWNhdGlvbnxlbnwwfHwwfHx8MA%3D%3D');
+    /* background: url('https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZWR1Y2F0aW9ufGVufDB8fDB8fHww'); */
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    /* background-position: center; */
+    /* background: linear-gradient(to right, #161179 55%, #2c56fe96); */
+    background: linear-gradient(to right, #161179 55%, #2c56fed2), url('https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZWR1Y2F0aW9ufGVufDB8fDB8fHww');
     /* background: linear-gradient(to bottom, #ffffff00, #2c56fe3b), url('images/bg.webp'); */
     /* box-shadow: 1px 1px 50px #2c56fe60; */
 }
@@ -115,9 +130,11 @@ header{
     margin: auto;
     align-items: center;
     gap: 50px;
-    padding: 80px 0;
+    padding-top: 50px;
+    /* padding: 80px 0; */
     /* padding: 50px 0 0px 0; */
     max-width: 1400px;
+    overflow: hidden;
 }
 
 .innerheader .form{
@@ -131,6 +148,31 @@ header{
 
 header h1{
     font-size: 50px;
+    color: white;
+}
+
+.headpoints{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  color: rgb(218, 218, 218);
+  margin: 30px 0;
+}
+
+.headpoints p{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: 100;
+}
+
+.headpoints p img{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid white;
+  padding: 3px;
 }
 
 span{
@@ -141,6 +183,7 @@ header h4{
     font-size: 22px;
     line-height: 40px;
     font-weight: 500;
+    color: white;
 }
 
 header ul{
@@ -155,11 +198,12 @@ header ul li{
     display: flex;
     align-items: center;
     gap: 10px;
-    color: rgb(71, 71, 71);
+    color: white;
 }
 
 header .imghead{
     position: relative;
+    transform: translateY(10px);
 }
 
 header .imghead .trophy{
@@ -172,6 +216,10 @@ header .imghead .trophy{
     right: 10px;
     bottom: 10px;
     filter: grayscale(9);
+}
+
+.bannerimg{
+  width: 100%;
 }
 
 
@@ -199,6 +247,17 @@ header .imghead .trophy{
 .imgheadsquare img{
     width: 80px;
     height: 80px;
+}
+
+.ratings{
+  background-color: white;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 15px 20px;
+  border-radius: 12px;
+  font-weight: 500;
 }
 
 /* details */
@@ -397,6 +456,7 @@ ul li{
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
     width: 85%;
+    max-width: 1400px;
     margin: auto;
     padding: 50px 0;
 }
@@ -410,6 +470,7 @@ ul li{
 
 .Lecturesinner{
   width: 85%;
+  max-width: 1400px;
   margin: auto;
   padding: 100px 0;
 }
@@ -435,6 +496,7 @@ ul li{
     border-radius: 0 0 24px 24px;
 }
 .courseinner{
+  max-width: 1400px;
     width: 85%;
     margin: auto;
     max-width: 1400px;
@@ -444,6 +506,14 @@ ul li{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
+  }
+
+  .course .row2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 90%;
+    margin: 10px auto;
   }
   
   .course .row .col{
@@ -507,7 +577,7 @@ ul li{
   
   .list_style li{
     list-style-type: none;
-    line-height: 25px;
+    line-height: 20px;
     margin-top: 10px;
   }
   
@@ -515,7 +585,7 @@ ul li{
     display: flex;
     align-items: center;
     gap: 10px;
-    line-height: 30px;
+    /* line-height: 30px; */
     font-size: 16px;
     color: rgb(67, 67, 67);
   }
@@ -553,6 +623,7 @@ ul li{
   .testimonialinner{
     padding: 50px 0;
     width: 85%;
+    max-width: 1400px;
     margin: auto;
 }
 
@@ -620,17 +691,30 @@ ul li{
     width: 15px;
 }
 
-.testimonials h4{
+.testimonials .testh{
     width: 45%;
     margin: auto;
+    /* text-align: center; */
+    /* margin-top: 50px; */
+    /* display: flex; */
+    /* align-items: start; */
+    /* margin-top: 0; */
+    gap: 0px;
     text-align: center;
-    margin-top: 20px;
+}
+
+.heart{
+  width: 40px;
+  height: 40px;
+  /* margin-top: 25px; */
+  transform: translateY(10px);
 }
 
   /* faq  */
 
   .faq{
       width: 85%;
+      max-width: 1400px;
       margin: auto;
       padding-top: 50px;
   }
@@ -698,6 +782,7 @@ ul li{
   /* innerfeatures */
   .features{
     width: 85%;
+    max-width: 1400px;
     margin: auto;
   }
   
@@ -775,6 +860,7 @@ ul li{
 
   .extra{
     width: 85%;
+    max-width: 1400px;
     margin: auto;
     /* padding: 100px 0px; */
     padding-top: 100px;
@@ -787,7 +873,7 @@ ul li{
   }
   
   .extra h1 img{
-    width: 40px;
+    width: 25px;
   }
   
   .extrainner{
@@ -803,9 +889,9 @@ ul li{
       color: white;
     }
     .extra button{
-    background-color: var(--secondary);
+    background-color: red;
     padding: 20px 25px;
-    color: black;
+    color: white;
     text-decoration: none;
     font-weight: 600;
     border-radius: 12px;
@@ -827,11 +913,28 @@ ul li{
       color: white;
     }
 
+    .extra_alert{
+      background-color: rgba(255, 0, 0, 0.105);
+      padding: 25px 10px;
+      position: relative;
+    }
+    .extra_alert::before{
+      content: "";
+      display: block;
+      width: 5px;
+      height: 100%;
+      background-color: red;
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+
   /* footer  */
 
 
   .innerfooter{
     width: 85%;
+    max-width: 1400px;
     margin: auto;
 }
 
@@ -981,8 +1084,12 @@ footer .footer1{
     
     .course .row{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 15px;
+      }
+
+      .course .row2{
+        width: 100%;
       }
 
       .faq{
@@ -996,13 +1103,18 @@ footer .footer1{
       .testimonialinner{
           width: 85%;
         }
+
+        .testimonials .testh{
+          width: 90%;
+        }
 }
 
 @media only screen and (max-width:950px) {
     .innerheader{
         width: 85%;
         flex-direction: column;
-        padding-top: 50px;       
+        padding-top: 50px;   
+        gap: 50px;    
     }
 
     .innerheader .imghead{
@@ -1068,12 +1180,12 @@ footer .footer1{
         width: 100%;
     }
     
-    .testimonials h4{
+    /* .testimonials h4{
         width: 95%;
         margin: auto;
         text-align: center;
         margin-top: 20px;
-    }
+    } */
     
     .extra{
         width: 95%;
@@ -1150,6 +1262,11 @@ footer .footer1{
   width: 100%;
 }
 
+.ratings img{
+  width: 40px !important;
+  /* height: 50px; */
+}
+
 }
 
 
@@ -1168,7 +1285,7 @@ footer .footer1{
 
     nav{
         padding: 10px 10px;
-        background-color: white;
+        /* background-color: white; */
     }
 
     nav a{
@@ -1230,7 +1347,7 @@ footer .footer1{
 
 
     .innerheader{
-        gap: 10px;
+        gap: 50px;
     }
     .div2_1:first-child{
         display: grid;
@@ -1311,8 +1428,8 @@ header ul{
 .imgheadsquare{
     position: absolute;
     background-color: white;
-    left: 0%;
-    bottom: 0%;
+    right: 0px;
+    bottom: 0px;
     transform: translate(-30%, -30%);
     padding: 30px 10px;
     width: fit-content;
@@ -1320,7 +1437,12 @@ header ul{
 }
 
 .imgheadsquare span{
-    font-size: 25px;
+    font-size: 15px;
+}
+
+.imgheadsquare img{
+    width: 50px;
+    height: 50px;
 }
 
 .formo{
@@ -1338,6 +1460,10 @@ header ul{
   
 .thanksinner{
     margin:50px auto;
+  }
+
+  .testimonials .testh{
+    width: 95%;
   }
 
 
