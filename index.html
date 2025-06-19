@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/fav.svg" type="image/x-icon">
 
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
@@ -61,7 +61,7 @@
             <form id="myform1" onsubmit="sendData(event)">
                 <input type="text" name="name" placeholder="Name" required />
                 <input type="email" name="email" placeholder="Email" required />
-                <input type="text" name="phone" placeholder="Phone" required />
+                <input type="tel" id="phone1" name="phone" placeholder="Phone" required />
                 <select name="course" required>
                     <option value="" disabled selected>Select Course</option>
                     <option value="IELTS Online Coaching">IELTS Online Coaching</option>
@@ -157,7 +157,7 @@
             <div class="popup-overlay" id="popup">
                 <div class="popup-content">
                 <button class="popup-close" onclick="closePopup()">×</button>
-                <iframe id="ytplayer" src="" title="YouTube video player" frameborder="0" autoplay; allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe id="ytplayer" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -558,13 +558,13 @@
             <form id="myform2" onsubmit="sendData2(event)">
                 <input type="text" name="name" placeholder="Name" required />
                 <input type="email" name="email" placeholder="Email" required />
-                <input type="text" name="phone" placeholder="Phone" required />
+                <input type="text" id="phone2" name="phone" placeholder="Phone" required />
                 <select name="course" required>
                     <option value="" disabled selected>Select Course</option>
                     <option value="IELTS Online Coaching">IELTS Online Coaching</option>
                     <option value="IELTS Classroom Coaching in Noida">IELTS Classroom Coaching in Noida</option>
                 </select>
-                <p id="status"></p>
+                <p id="status2"></p>
                 <button type="submit">Submit</button>
             </form>
             
@@ -635,13 +635,13 @@
     <form id="myform3" onsubmit="sendData3(event)">
         <input type="text" name="name" placeholder="Name" required />
         <input type="email" name="email" placeholder="Email" required />
-        <input type="text" name="phone" placeholder="Phone" required />
+        <input type="text" id="phone3" name="phone" placeholder="Phone" required />
         <select name="course" required>
             <option value="" disabled selected>Select Course</option>
             <option value="IELTS Online Coaching">IELTS Online Coaching</option>
             <option value="IELTS Classroom Coaching in Noida">IELTS Classroom Coaching in Noida</option>
         </select>
-        <p id="status"></p>
+        <p id="status3"></p>
         <button type="submit">Submit</button>
     </form>
   </div>
@@ -699,18 +699,31 @@ function closeform(){
 <script>
     const scriptURL = "https://script.google.com/macros/s/AKfycbwv4oCXxBUx8LNubAFOA5Yu2zEBNVss8_mfTHLEFQYN1Peo6oY3GFX_6MnNAQQO5OAnFA/exec"; // replace with your deployed URL
     
+
+    function isValidPhone(phone) {
+    return /^[6-9]\d{9}$/.test(phone);
+    }
+
     function sendData(event) {
     event.preventDefault();
     const form = document.getElementById("myform1");
     const status = document.getElementById("status");
     const layer = document.getElementById("layer");
 
-    // Show spinner and clear status
-      spinner.style.display = "block";
-      layer.style.display = "block"
-      status.textContent = "";
+    const phone = document.querySelector("#phone1").value.trim();
 
-    const formData = new FormData(form);
+    // Show spinner and clear status
+      status.textContent = "";
+      
+      const formData = new FormData(form);
+
+    if (!isValidPhone(phone)) {
+    //   e.preventDefault();
+    status.textContent = "Please enter a valid Phone Number";
+      alert("Please enter a valid 10-digit mobile number starting with 6-9.");
+    }else{
+    spinner.style.display = "block";
+      layer.style.display = "block"
 
     fetch(scriptURL, {
       method: "POST",
@@ -729,20 +742,31 @@ function closeform(){
         status.textContent = "Submission Failed!";
     // alert("Something went wrong!")
     });
+}
   }
 
   function sendData2(event) {
     event.preventDefault();
     const form = document.getElementById("myform2");
-    const status = document.getElementById("status");
+    const status = document.getElementById("status2");
     const layer = document.getElementById("layer");
 
+    const phone = document.querySelector("#phone2").value.trim();
+
     // Show spinner and clear status
-      spinner.style.display = "block";
-      layer.style.display = "block"
+    //   spinner.style.display = "block";
+    //   layer.style.display = "block"
       status.textContent = "";
 
     const formData = new FormData(form);
+
+    if (!isValidPhone(phone)) {
+    //   e.preventDefault();
+    status.textContent = "Please enter a valid Phone Number";
+      alert("Please enter a valid 10-digit mobile number starting with 6-9.");
+    }else{
+        spinner.style.display = "block";
+        layer.style.display = "block"
 
     fetch(scriptURL, {
       method: "POST",
@@ -761,6 +785,7 @@ function closeform(){
         status.textContent = "Submission Failed!";
     // alert("Something went wrong!")
     });
+}
   }
 
   function sendData3(event) {
@@ -769,12 +794,22 @@ function closeform(){
     const status = document.getElementById("status");
     const layer = document.getElementById("layer");
 
+    const phone = document.querySelector("#phone3").value.trim();
+
     // Show spinner and clear status
-      spinner.style.display = "block";
-      layer.style.display = "block"
+    //   spinner.style.display = "block";
+    //   layer.style.display = "block"
       status.textContent = "";
 
     const formData = new FormData(form);
+
+    if (!isValidPhone(phone)) {
+    //   e.preventDefault();
+    status.textContent = "Please enter a valid Phone Number";
+      alert("Please enter a valid 10-digit mobile number starting with 6-9.");
+    }else{
+        spinner.style.display = "block";
+      layer.style.display = "block"
 
     fetch(scriptURL, {
       method: "POST",
@@ -793,6 +828,7 @@ function closeform(){
         status.textContent = "Submission Failed!";
     // alert("Something went wrong!")
     });
+}
   }
 
 </script>
@@ -804,7 +840,7 @@ function closeform(){
     function openPopup() {
       popup.style.display = 'flex';
       // Set embed URL with autoplay
-      player.src = 'https://www.youtube.com/embed/YV59bYM_DEY?si=kxE3s3md90Xe4i9i';
+      player.src = 'https://www.youtube.com/embed/YV59bYM_DEY?si=kxE3s3md90Xe4i9i??autoplay=1';
     }
 
     function closePopup() {
