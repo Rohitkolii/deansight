@@ -98,7 +98,13 @@ nav a{
 
 /* header  */
 header{
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #2c56fe35);
+    /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #2c56fe35); */
+    background: linear-gradient(to bottom, #fff, #2c56fe53), url('https://images.unsplash.com/photo-1462536943532-57a629f6cc60?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGVkdWNhdGlvbnxlbnwwfHwwfHx8MA%3D%3D');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background: linear-gradient(to bottom, #ffffff00, #2c56fe3b), url('images/bg.webp'); */
+    /* box-shadow: 1px 1px 50px #2c56fe60; */
 }
 
 .innerheader{
@@ -131,9 +137,9 @@ span{
 }
 
 header h4{
-    font-size: 25px;
-    line-height: 50px;
-    font-weight: 600;
+    font-size: 22px;
+    line-height: 40px;
+    font-weight: 500;
 }
 
 header ul{
@@ -262,7 +268,9 @@ header .imghead .trophy{
     /* line-height: 80px; */
     margin: 20px 0;
 }
-
+.exbtn{
+  display: none;
+}
 .badge{
     background-color: #5e3aee1c;
     width: fit-content;
@@ -362,7 +370,7 @@ ul li{
 
     .popup-content iframe {
       width: 100%;
-      height: 600px;
+      height: 550px;
       border-radius: 8px;
     }
 
@@ -766,6 +774,8 @@ ul li{
   .extra{
     width: 85%;
     margin: auto;
+    /* padding: 100px 0px; */
+    padding-top: 100px;
   }
   
   .extra h1{
@@ -781,11 +791,9 @@ ul li{
   .extrainner{
     background-color: #090614;
     width: 100%;
-    /* margin: auto; */
-    /* padding: 80px 0px; */
     text-align: center;
     border-radius: 12px;
-    margin: 50px auto;
+    margin: 20px auto;
     padding: 80px 20px;
   }
 
@@ -1131,6 +1139,15 @@ footer .footer1{
   gap: 20px;
 }
 
+.demotext #showf{
+  display: none;
+}
+
+.exbtn{
+  display: block;
+  width: 100%;
+}
+
 }
 
 
@@ -1191,6 +1208,18 @@ footer .footer1{
 
     .footer2{
         margin-bottom: 80px;
+    }
+
+    .popup-content {
+      position: relative;
+      width: 95%;
+      max-width: 1000px;
+    }
+
+    .popup-content iframe {
+      width: 100%;
+      height: 350px;
+      border-radius: 8px;
     }
 }
 
@@ -1297,9 +1326,9 @@ header ul{
     display: none;
   }
 
-  .extra{
+  /* .extra{
     padding: 15px;
-  }
+  } */
 
   .extra h4:nth-child(2){
     font-size: 15px;
