@@ -15,10 +15,10 @@
         <script type="text/javascript">
         (function(){
             emailjs.init({
-                publicKey: "IH9bMYfsknePnBnoU",
+                publicKey: "EoRqXeN9WXwvaf8lr",
             });
         })();
-</script>
+    </script>
 
 
 </head>
@@ -379,7 +379,7 @@
 <!-- testimonials -->
 
 <section class="testimonials">
-    <div class="badge" style="margin: auto;">Testimonials</div>
+    <!-- <div class="badge" style="margin: auto;">Testimonials</div> -->
     <h4 style="display: flex; gap: 0;">
         <svg width="60" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M25.551 24.9167C22.0793 27.9571 18.5286 29.9403 18 30.2268C17.4714 29.9403 13.9207 27.9571 10.449 24.9167C6.75904 21.6852 3.50034 17.5561 3.5 13.2194C3.50243 11.2392 4.29015 9.3407 5.69042 7.94042C7.09069 6.54015 8.98917 5.75243 10.9694 5.75C13.5077 5.75019 15.668 6.83556 17.0004 8.61006C17.2365 8.92451 17.6068 9.10953 18 9.10953C18.3932 9.10953 18.7635 8.92451 18.9996 8.61006C20.332 6.83556 22.4923 5.75019 25.0306 5.75C27.0108 5.75243 28.9093 6.54015 30.3096 7.94042C31.71 9.34087 32.4978 11.2396 32.5 13.2202C32.4993 17.5566 29.2407 21.6854 25.551 24.9167Z" stroke="#EE3A3A" stroke-width="2.5" stroke-linejoin="round"></path>
@@ -716,6 +716,7 @@ function closeform(){
       status.textContent = "";
       
       const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries()); // for emailjs
 
     if (!isValidPhone(phone)) {
     //   e.preventDefault();
@@ -728,12 +729,15 @@ function closeform(){
     fetch(scriptURL, {
       method: "POST",
       body: formData
-    })
+    }).then(() => {
+        return emailjs.send("service_unk70pt", "template_v87808p", data);
+      })
     .then(() => {
+        // emailjs.send("service_unk70pt", "template_v87808p", formData).then(()=> console.log("Sended Mail")).catch((err)=> console.log(err))
         spinner.style.display = "none";
         layer.style.display = "none"
     //   status.textContent = "✅ Submitted Successfully!";
-    document.location.replace("thanks.html")
+    // document.location.replace("thanks.html")
     form.reset();
     })
     .catch(() => {
@@ -759,6 +763,7 @@ function closeform(){
       status.textContent = "";
 
     const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries()); // for emailjs
 
     if (!isValidPhone(phone)) {
     //   e.preventDefault();
@@ -771,7 +776,9 @@ function closeform(){
     fetch(scriptURL, {
       method: "POST",
       body: formData
-    })
+    }).then(() => {
+        return emailjs.send("service_unk70pt", "template_v87808p", data);
+      })
     .then(() => {
         spinner.style.display = "none";
         layer.style.display = "none"
@@ -802,6 +809,7 @@ function closeform(){
       status.textContent = "";
 
     const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries()); // for emailjs
 
     if (!isValidPhone(phone)) {
     //   e.preventDefault();
@@ -814,7 +822,9 @@ function closeform(){
     fetch(scriptURL, {
       method: "POST",
       body: formData
-    })
+    }).then(() => {
+        return emailjs.send("service_unk70pt", "template_v87808p", data);
+      })
     .then(() => {
         spinner.style.display = "none";
         layer.style.display = "none"
