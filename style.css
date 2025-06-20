@@ -66,8 +66,6 @@ nav{
     /* z-index: 9; */
     background-color: #fff;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.321);
-    /* border: 1px solid black; */
-    /* box-shadow: 1px 1px 5px #2c56fe; */
     
 }
 
@@ -110,18 +108,10 @@ button{
 
 nav a{
     padding: 12px 25px;
-     /* background-color: white; */
-    /* box-shadow: 1px 1px 5px #2c56fe; */
-    /* color: var(--primary) !important;
-    background-color: white; */
-    /* background-color: black; */
 }
 
 /* header  */
 header{
-    /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #2c56fe35); */
-    /* background: url('https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZWR1Y2F0aW9ufGVufDB8fDB8fHww'); */
-    /* background: linear-gradient(to right, #161179 55%, #2c56fe96); */
     background: linear-gradient(to right, 
     var(--primary) 60%, #c4cff77d), 
     url('images/bgfull.avif');
@@ -129,8 +119,6 @@ header{
     background-size: cover;
     background-position: center;
     position: relative;
-    /* background: linear-gradient(to bottom, #ffffff00, #2c56fe3b), url('images/bg.webp'); */
-    /* box-shadow: 1px 1px 50px #2c56fe60; */
   }
   
   
@@ -253,31 +241,6 @@ header .imghead{
   filter: grayscale(9px);
 }
 
-
-/* .imgheadsquare{
-    position: absolute;
-    background-color: white;
-    left: -20px;
-    bottom: -20px;
-    transform: translate(-50%, -40%);
-    padding: 20px;
-    border-radius: 6px;
-} */
-
-/* .imgheadsquare p{
-    color: rgb(92, 92, 92);
-    font-weight: 500;
-}
-
-.imgheadsquare span{
-    font-size: 25px;
-    font-weight: 900;
-}
-
-.imgheadsquare img{
-    width: 30px;
-    height: 30px;
-} */
 
 .ratings{
   position: absolute;
@@ -653,7 +616,7 @@ ul li{
   /* testimonial */
 
   .testimonials{
-    padding: 80px 0;
+    padding: 20px 0;
   }
 
   .testimonialinner{
@@ -730,11 +693,6 @@ ul li{
 .testimonials .testh{
     width: 45%;
     margin: auto;
-    /* text-align: center; */
-    /* margin-top: 50px; */
-    /* display: flex; */
-    /* align-items: start; */
-    /* margin-top: 0; */
     gap: 0px;
     text-align: center;
 }
