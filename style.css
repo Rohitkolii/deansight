@@ -126,13 +126,14 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
     /* background: linear-gradient(to bottom, #ffffff00, #2c56fe3b), url('images/bg.webp'); */
     /* box-shadow: 1px 1px 50px #2c56fe60; */
   }
   
   
   .google{
-    width: 60px;
+    width: 28px;
   }
   
   .innerheader{
@@ -146,6 +147,7 @@ header{
     padding-top: 20px;
     max-width: 1400px;
     overflow: hidden;
+    position: relative;
 }
 
 .innerheader .form{
@@ -213,7 +215,7 @@ header ul li{
 }
 
 header .imghead{
-    position: relative;
+    /* position: relative; */
     bottom: 0px;
     
 }
@@ -223,19 +225,44 @@ header .imghead{
   transform: translateY(10px);
 }
 
-
 .imgheadsquare{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.imgheadsquare .cardsimtext span{
+  color: black;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+
+.imgheadsquare span{
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.imgheadsquare img{
+  width: 40px;
+  filter: grayscale(9px);
+}
+
+
+/* .imgheadsquare{
     position: absolute;
     background-color: white;
     left: -20px;
     bottom: -20px;
     transform: translate(-50%, -40%);
     padding: 20px;
-    /* width: 220px; */
     border-radius: 6px;
-}
+} */
 
-.imgheadsquare p{
+/* .imgheadsquare p{
     color: rgb(92, 92, 92);
     font-weight: 500;
 }
@@ -248,7 +275,7 @@ header .imghead{
 .imgheadsquare img{
     width: 30px;
     height: 30px;
-}
+} */
 
 .ratings{
   position: absolute;
@@ -257,6 +284,7 @@ header .imghead{
   display: flex;
   align-items: center;
   gap: 5px;
+  /* top: 50px; */
   padding: 10px 20px;
   border-radius: 12px;
   font-weight: 500;
@@ -339,6 +367,7 @@ header .imghead{
     border-radius: 12px;
     padding: 10px 20px;
     color: var(--primary);
+    text-align: center;
 }
 
 ul .check img{
@@ -522,7 +551,7 @@ ul li{
   }
   
   .best .heading2{
-    color: var(--primary);
+    color: red;
   }
   
   .badge_success{
@@ -534,6 +563,7 @@ ul li{
     font-weight: 500;
     width: fit-content;
     margin: auto;
+    text-align: center;
   }
   .course p, li{
     color: gray;
@@ -614,7 +644,7 @@ ul li{
   }
 
   .courselinkp a{
-    color: var(--primary);
+    color: red;
 
   }
 
@@ -822,8 +852,18 @@ ul li{
     padding: 15px;
     text-align: center;
     font-weight: 600;
-    color: rgb(46, 46, 46);
     border: 1px solid #5e3aee11;
+  }
+
+  .square p{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .square p span{
+    color: rgb(46, 46, 46);
+    line-height: 25px;
   }
 
   .square_sub{
@@ -890,7 +930,7 @@ ul li{
     padding: 50px 20px;
   }
 
-  .extra h4{
+  .extra h4 span{
       color: white;
     }
     .extra button{
@@ -1205,6 +1245,7 @@ footer .footer1{
 @media only screen and (max-width:950px) {
   nav{
     background-color: var(--primary);
+    /* box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.212); */
   }
   nav a{
     border: 2px solid white;
@@ -1315,14 +1356,11 @@ footer .footer1{
     }
 
     
-    .imghead{
+    /* .imghead{
       position: static;
-    }
-    .innerheader{
-      position: static;
-    }
+    } */
 
-    .imgheadsquare{
+    /* .imgheadsquare{
         position: absolute;
         background-color: white;
         left: 0px;
@@ -1331,7 +1369,7 @@ footer .footer1{
         padding: 30px 20px;
         width: fit-content;
         border-radius: 6px;
-    }
+    } */
 
 
     .btn button{
@@ -1391,6 +1429,12 @@ footer .footer1{
 
 
 
+@media only screen and (max-width:800px){
+  .extra h4 span{
+      display: flex;
+      flex-direction: column;
+    }
+}
 @media only screen and (max-width:700px){
     .course .row{
         grid-template-columns: repeat(1, 1fr);
@@ -1494,15 +1538,22 @@ footer .footer1{
 
   .square_sub{
     background-color: white;
+    /* width: fit-content; */
+    padding: 10px;
     width: fit-content;
-    padding: 5;
+    height: fit-content;
     border-radius: 6px;
     margin: auto;
     margin-bottom: 5px;
   }
 
+  .square{
+    height: auto;
+    margin-top: 5px;
+  }
+
   .square_sub img{
-    width: 30px;
+    width: 35px;
   }
 
   .innerheader h1{
@@ -1571,17 +1622,14 @@ header ul{
       font-size: 18px;
     }
 
-    .imgheadsquare{
-        /* position: sticky; */
+    /* .imgheadsquare{
         background-color: white;
         left: 200px;
-        /* right: 0px; */
-        /* bottom: 5px; */
         transform: translate(0%, 0%);
         padding: 20px 20px;
         width: fit-content;
         border-radius: 6px;
-    }
+    } */
 
     .innerheader button{
       width: 100%;
@@ -1621,12 +1669,43 @@ header ul{
     .btnthanks a{
     padding: 10px;
   }
+
+  .badge{
+    padding: 8px 10px;
 }
 
-@media only screen and (max-width:400px){
-  .imgheadsquare{
-        background-color: white;
-        left: 0px;
-        padding: 20px 20px;
-    }
+.imgheadsquare{
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+
+.imgheadsquare span{
+  font-size: 20px;
+}
+
+.imgheadsquare img{
+  width: 20px;
+}
+
+.imgheadsquare .cardsimtext{
+  display: flex;
+  flex-direction: column;
+}
+
+.innerheader h1{
+    font-size: 30px;
+}
+
+}
+
+@media only screen and (max-width:300px){
+  .ratings{
+  top: 20px;
+  z-index: 1;
+}
 }
