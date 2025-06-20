@@ -117,7 +117,7 @@ header{
     /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #2c56fe35); */
     /* background: url('https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZWR1Y2F0aW9ufGVufDB8fDB8fHww'); */
     /* background: linear-gradient(to right, #161179 55%, #2c56fe96); */
-    background: linear-gradient(to right, var(--primary) 50%, #2c56fe85), url('https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZWR1Y2F0aW9ufGVufDB8fDB8fHww');
+    background: linear-gradient(to right, var(--primary) 50%, #9cb0ffc0), url('images/bgfull.avif');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -125,6 +125,7 @@ header{
     /* box-shadow: 1px 1px 50px #2c56fe60; */
     /* background-blend-mode: difference; */
   }
+  
   
   .google{
     width: 60px;
@@ -186,9 +187,9 @@ span{
 }
 
 header h4{
-    font-size: 22px;
-    line-height: 40px;
-    font-weight: 500;
+    font-size: 20px;
+    line-height: 35px;
+    font-weight: 400;
     color: white;
 }
 
@@ -251,7 +252,7 @@ header .imghead{
   display: flex;
   align-items: center;
   gap: 5px;
-  padding: 15px 20px;
+  padding: 10px 20px;
   border-radius: 12px;
   font-weight: 500;
 }
@@ -374,15 +375,20 @@ ul li{
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: 40px;
-      color: white;
-      background: #061a6d73;
+      /* color: white; */
+      background: #fff;
       border-radius: 50%;
-      /* padding: 20px; */
-      width: 80px;
-      height: 80px;
+      padding: 20px;
+      width: 70px;
+      height: 70px;
       display: flex;
       align-items: center;
       justify-content: center;
+      box-shadow: 1px 1px 5px black;
+    }
+
+    .play-button img{
+      box-shadow: none;
     }
 
     .popup-overlay {
@@ -449,7 +455,7 @@ ul li{
   width: 85%;
   max-width: 1400px;
   margin: auto;
-  padding: 100px 0;
+  padding: 50px 0;
 }
 
 .Lecturesgrid{
@@ -545,6 +551,13 @@ ul li{
   .price{
     font-size: 16px;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .price img{
+    width: 20px;
   }
   
   .price span{
@@ -556,11 +569,14 @@ ul li{
     list-style-type: none;
     line-height: 20px;
     margin-top: 10px;
+    /* display: flex; */
+    gap: 5px;
   }
   
   .checkpoints2{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
+    align-items: flex-start;
     gap: 10px;
     /* line-height: 30px; */
     font-size: 16px;
@@ -569,6 +585,7 @@ ul li{
   .checkpoints2 img{
     width: 15px;
     height: 15px;
+    flex-shrink: 0;
   }
   
   .title h2{
@@ -597,6 +614,11 @@ ul li{
   }
 
   /* testimonial */
+
+  .testimonials{
+    padding: 80px 0;
+  }
+
   .testimonialinner{
     padding: 50px 0;
     width: 85%;
@@ -860,7 +882,7 @@ ul li{
     text-align: center;
     border-radius: 12px;
     margin: 20px auto;
-    padding: 80px 20px;
+    padding: 50px 20px;
   }
 
   .extra h4{
@@ -897,9 +919,10 @@ ul li{
     }
     
     .alertinner{
-      padding: 80px 5px;
+      padding: 50px 5px;
       text-align: center;
       width: 98%;
+      max-width: 1400px;
       margin: auto;
       border-radius: 12px;
       background:linear-gradient(to right, #2c56fe, #ffd230);
@@ -1104,6 +1127,10 @@ footer .footer1{
     background-color: var(--secondary);
   }
 
+  .thankscon p{
+    line-height: 28px;
+  }
+
   .thankscon .links{
     display: flex;
     justify-content: center;
@@ -1118,6 +1145,10 @@ footer .footer1{
 
   .thankscon .url a{
     color: var(--primary);
+  }
+
+  .feturebtnex{
+    display: none;
   }
 
 @media only screen and (max-width:1100px) {
@@ -1169,6 +1200,9 @@ footer .footer1{
 @media only screen and (max-width:950px) {
   nav{
     background-color: var(--primary);
+  }
+  header{
+    background: linear-gradient(to bottom, var(--primary) 60%, #9cb0ffc0), url('images/bgfull.avif');
   }
     .innerheader{
         width: 85%;
@@ -1338,6 +1372,12 @@ footer .footer1{
 .ratings{
   left: 0;
 }
+.feturebtn{
+  display: none;
+}
+.feturebtnex{
+  display: block;
+}
 
 }
 
@@ -1421,6 +1461,7 @@ footer .footer1{
     .innerheader{
         gap: 50px;
     }
+
     .div2_1:first-child{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1459,10 +1500,15 @@ footer .footer1{
     font-size: 35px;
 }
 
-.innerheader h4, h4{
+h4{
     font-size: 22px;
     line-height: 30px;
     font-weight: 700;
+  }
+  .innerheader h4{
+    font-size: 20px;
+    line-height: 30px;
+  font-weight: 400;
 }
 header ul{
     list-style-type: none;
@@ -1489,42 +1535,10 @@ header ul{
     height: auto;
 }
 
-/* .innerheader .imghead img{ */
-    /* width: 100%; */
-    /* height: 100%; */
-    /* float: right; */
-    /* text-align: right; */
-    /* object-fit: contain; */
-/* } */
-
-/* .imgheadsquare{
-    position: absolute;
-    background-color: white;
-    right: 0px;
-    bottom: 0px;
-    transform: translate(-30%, -30%);
-    padding: 30px 10px;
-    width: fit-content;
-    border-radius: 6px;
-}
-
-.imgheadsquare span{
-    font-size: 15px;
-}
-
-.imgheadsquare img{
-    width: 50px;
-    height: 50px;
-} */
-
 .formo{
     width: 95%;
     display: none;
   }
-
-  /* .extra{
-    padding: 15px;
-  } */
 
   .extra h4:nth-child(2){
     font-size: 15px;
@@ -1549,14 +1563,14 @@ header ul{
     }
 
     .imgheadsquare{
-        position: relative;
+        /* position: sticky; */
         background-color: white;
-        /* left: 0px;
-        right: 0; */
+        left: 200px;
+        /* right: 0px; */
         /* bottom: 5px; */
         transform: translate(0%, 0%);
-        padding: 30px 20px;
-        width: 100%;
+        padding: 20px 20px;
+        width: fit-content;
         border-radius: 6px;
     }
 
@@ -1564,4 +1578,46 @@ header ul{
       width: 100%;
     }
 
+}
+
+
+@media only screen and (max-width:500px){
+  .square{
+    padding:15px 2px;
+    font-size: 13px;
+  } 
+
+  .courselinkp{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .alertinner{
+      padding: 30px 5px;
+    }
+
+    .extrainner{
+      padding: 30px 5px;
+    }
+
+    .extralink{
+      font-size: 15px;
+    }
+
+    .links{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .btnthanks a{
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width:400px){
+  .imgheadsquare{
+        background-color: white;
+        left: 0px;
+        padding: 20px 20px;
+    }
 }
