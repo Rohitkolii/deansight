@@ -64,6 +64,8 @@ nav{
     /* position: sticky; */
     top: 0;
     z-index: 9;
+    /* background-color: #2c56fe; */
+    /* box-shadow: 1px 1px 5px #2c56fe; */
     
 }
 
@@ -107,9 +109,10 @@ button{
 nav a{
     padding: 12px 25px;
      /* background-color: white; */
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.727);
+    /* box-shadow: 1px 1px 5px #2c56fe; */
     /* color: var(--primary) !important;
     background-color: white; */
+    /* background-color: black; */
 }
 
 /* header  */
@@ -1201,6 +1204,9 @@ footer .footer1{
   nav{
     background-color: var(--primary);
   }
+  nav a{
+    border: 2px solid white;
+  }
   header{
     background: linear-gradient(to bottom, var(--primary) 60%, #9cb0ffc0), url('images/bgfull.avif');
   }
@@ -1402,6 +1408,7 @@ footer .footer1{
 
     nav a{
         padding: 10px 20px;
+        /* border: 1px solid white; */
     }
 
     nav a span{
