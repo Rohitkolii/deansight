@@ -1512,19 +1512,19 @@ header ul{
       width: 100%;
     }
 
-    .badge{
+    /* .badge{
     width: 95vw;
 }
 
 .tprofile .badge{
     width: fit-content;
-}
+} */
 
-.testimonials .badge{
+/* .testimonials .badge{
   text-align: center;
   max-width: fit-content;
   width: 90%;
-}
+} */
 
 }
 
