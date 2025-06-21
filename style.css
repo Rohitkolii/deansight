@@ -310,13 +310,13 @@ header .imghead{
 .exbtn{
   display: none;
 }
-.badge{
-    background-color: #00808014;
+.badge {
+    background-color: rgba(0, 128, 128, 0.08);
     width: fit-content;
+    display: inline-block; /* Fallback for older browsers */
     border-radius: 12px;
     padding: 10px 20px;
     color: var(--primary);
-    text-align: left;
 }
 
 ul .check img{
