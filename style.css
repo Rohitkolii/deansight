@@ -1064,9 +1064,10 @@ footer .footer1{
     font-size: 28px;
   }
 
-  .formo h4 img{
+  .formo h5 img{
     width: 20px;
     cursor: pointer;
+    float: right;
   }
 
 
