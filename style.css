@@ -317,7 +317,6 @@ header .imghead{
     padding: 10px 20px;
     color: var(--primary);
     text-align: left;
-    font-size: 16px;
 }
 
 ul .check img{
@@ -1513,6 +1512,19 @@ header ul{
       width: 100%;
     }
 
+    .badge{
+    width: 95vw;
+}
+
+.tprofile .badge{
+    width: fit-content;
+}
+
+.testimonials .badge{
+  text-align: center;
+  width: 90%;
+}
+
 }
 
 
@@ -1573,16 +1585,6 @@ header ul{
 
 .innerheader h1{
     font-size: 30px;
-}
-
-.badge{
-    background-color: #00808014;
-    width: 100%;
-    border-radius: 12px;
-    padding: 10px 20px;
-    color: var(--primary);
-    text-align: left;
-    font-size: 14px;
 }
 
 }
