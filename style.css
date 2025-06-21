@@ -946,7 +946,7 @@ ul li{
     }
 
     .extralink a{
-      color: red;
+      color: white;
       font-weight: 600;
     }
   
@@ -1237,6 +1237,11 @@ footer .footer1{
   nav{
     /* background-color: var(--primary); */
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.212);
+    position: fixed;
+    width: 100%;
+    background-color: var(--primary);
+    top: 0;
+    z-index: 9;
   }
   nav a{
     border: 2px solid white;
@@ -1247,7 +1252,7 @@ footer .footer1{
     .innerheader{
         width: 85%;
         flex-direction: column;
-        padding-top: 50px;   
+        padding-top: 120px;   
         gap: 50px;    
     }
 
