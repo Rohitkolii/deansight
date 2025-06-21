@@ -280,47 +280,6 @@ header .imghead{
   color: black;
 }
 
-/* details */
-
-.details{
-    width: 85%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    transform: translateY(50%);
-}
-
-.detailscard{
-    background-color: rgba(255, 255, 255, 0.511);
-    border-radius: 12px;
-    padding: 20px;
-    border: 1px solid rgba(92, 92, 92, 0.118);
-}
-
-.detailscard_inner{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.detailscard_inner p:nth-child(1){
-    font-weight: 900;
-    font-size: 20px;
-}
-.detailscard_inner p:nth-child(2){
-    font-weight: 600;
-    color: rgb(37, 37, 37);
-    line-height: 25px;
-}
-
-.detailscard img{
-    background-color: white;
-    width: 80px;
-    height: 70px;
-    padding: 15px;
-    border-radius: 6px;
-}
 
 /* demo */
 .democon{
@@ -351,13 +310,17 @@ header .imghead{
 .exbtn{
   display: none;
 }
+/* .badgecon{
+  display: flex;
+  justify-content: center;
+} */
+
 .badge{
-    background-color: #00808014;
-    width: fit-content;
-    border-radius: 12px;
-    padding: 10px 20px;
+  width: fit-content;
     color: var(--primary);
-    text-align: center;
+    background-color: #00808014;
+    padding: 10px 20px;
+    border-radius: 12px;
 }
 
 ul .check img{
@@ -393,13 +356,12 @@ ul li{
       box-shadow: 1px 1px 5px rgb(65, 65, 65);
     }
 
-    .video-thumbnail .play-button {
+    /* .video-thumbnail .play-button {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: 40px;
-      /* color: white; */
       background: #fff;
       border-radius: 50%;
       padding: 20px;
@@ -431,7 +393,6 @@ ul li{
     .popup-content {
       position: relative;
       width: 90%;
-      /* height: fit-content; */
       max-width: 1000px;
     }
 
@@ -443,19 +404,14 @@ ul li{
 
     .popup-close {
       position: relative;
-      /* top: -20px; */
-      /* right: -10px; */
       float: right;
-      /* background: #fdd017; */
       color: white;
       border: none;
       border-radius: 50%;
-      /* width: 30px;
-      height: 30px; */
       font-size: 25px;
       cursor: pointer;
       background-color: transparent !important;
-    }
+    } */
 
 /* certifiedcon */
 .certifiedinner{
@@ -572,6 +528,11 @@ ul li{
   .course .title{
     text-align: center;
   }
+  
+  .course .title .badge{
+    text-align: left;
+  }
+
   
   .price{
     font-size: 16px;
@@ -1023,6 +984,7 @@ footer .footer1{
     display: flex;
     gap: 20px;
     margin-top: 10px;
+    margin-left: 20px;
   }
 
   .social div{
@@ -1192,11 +1154,6 @@ footer .footer1{
         width: 85%;
     }
     
-    .details{
-        width: 90%;
-        gap: 10px;
-    }
-    
     .courseinner{
         width: 85%;
     }
@@ -1259,25 +1216,9 @@ footer .footer1{
     .innerheader .imghead{
         width: 100%;
         margin: auto;
-        /* height: 600px; */
     }
-    /* .innerheader .imghead img{
-        width: 100%;
-        height: 100%;
-        float: right;
-        text-align: right;
-        object-fit: contain;
-    } */
 
-    .details{
-        width: 85%;
-        margin: 30px auto;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 5px;
-        transform: translateY(0%);
-        padding: 30px 0;
-    }
+    
     
     .democon{
         margin-top: 0px;
@@ -1291,7 +1232,6 @@ footer .footer1{
     .demoinner .demoimg img{
         width: 100%;
         height: 100%;
-        /* object-fit: cover; */
         border-radius: 12px;
     }
     
@@ -1319,13 +1259,6 @@ footer .footer1{
         width: 100%;
     }
     
-    /* .testimonials h4{
-        width: 95%;
-        margin: auto;
-        text-align: center;
-        margin-top: 20px;
-    } */
-    
     .extra{
         width: 95%;
     }
@@ -1334,11 +1267,6 @@ footer .footer1{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         padding: 20px 0;
-    }
-    
-    .detailscard_inner{
-        flex-direction: column;
-        text-align: center;
     }
 
     header h1{
@@ -1350,23 +1278,6 @@ footer .footer1{
         line-height: 50px;
         font-weight: 600;
     }
-
-    
-    /* .imghead{
-      position: static;
-    } */
-
-    /* .imgheadsquare{
-        position: absolute;
-        background-color: white;
-        left: 0px;
-        bottom: 5px;
-        transform: translate(50%, 0%);
-        padding: 30px 20px;
-        width: fit-content;
-        border-radius: 6px;
-    } */
-
 
     .btn button{
         width: 100%;
@@ -1406,11 +1317,6 @@ footer .footer1{
   width: 100%;
 }
 
-.ratings img{
-  /* width: 18px !important; */
-  /* height: 50px; */
-}
-
 .ratings{
   top: auto;
   left: 0;
@@ -1423,8 +1329,6 @@ footer .footer1{
 }
 
 }
-
-
 
 @media only screen and (max-width:800px){
   .extra h4 span{
@@ -1446,12 +1350,10 @@ footer .footer1{
 
     nav{
         padding: 10px 10px;
-        /* background-color: white; */
     }
 
     nav a{
         padding: 10px 20px;
-        /* border: 1px solid white; */
     }
 
     nav a span{
@@ -1490,7 +1392,7 @@ footer .footer1{
     .footer2{
         margin-bottom: 80px;
     }
-
+/* 
     .popup-content {
       position: relative;
       width: 95%;
@@ -1501,7 +1403,7 @@ footer .footer1{
       width: 100%;
       height: 300px;
       border-radius: 8px;
-    }
+    } */
 }
 
 
@@ -1515,10 +1417,8 @@ footer .footer1{
     .div2_1:first-child{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        /* display: flex; */
         gap: 10px;
         justify-content: center;
-        /* justify-content: space-evenly; */
       }
       .div2_1{
         display: grid;
@@ -1535,7 +1435,6 @@ footer .footer1{
 
   .square_sub{
     background-color: white;
-    /* width: fit-content; */
     padding: 10px;
     width: fit-content;
     height: fit-content;
@@ -1575,7 +1474,7 @@ header ul{
     margin-bottom: 50px;
 }
 
-.innerheader,.details,.democon,.certifiedinner, .courseinner, .faq,.features,.testimonialinner, .innerfooter, .Lecturesinner{
+.innerheader,.democon,.certifiedinner, .courseinner, .faq,.features,.testimonialinner, .innerfooter, .Lecturesinner{
     width: 95%;
 }
 
@@ -1618,16 +1517,6 @@ header ul{
       font-weight: 600;
       font-size: 18px;
     }
-
-    /* .imgheadsquare{
-        background-color: white;
-        left: 200px;
-        transform: translate(0%, 0%);
-        padding: 20px 20px;
-        width: fit-content;
-        border-radius: 6px;
-    } */
-
     .innerheader button{
       width: 100%;
     }
@@ -1666,10 +1555,6 @@ header ul{
     .btnthanks a{
     padding: 10px;
   }
-/* 
-  .badge{
-    padding: 8px 15px;
-} */
 
 .imgheadsquare{
   position: absolute;
