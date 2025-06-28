@@ -671,6 +671,7 @@ ul li{
 }
 .testimonialinner .rating img{
     width: 15px;
+    height: auto;
 }
 
 .testimonials .testh{
@@ -820,6 +821,7 @@ ul li{
   }
   .square_sub img{
     width: 100%;
+    height: auto;
   }
 
   .features button{
@@ -1030,6 +1032,7 @@ footer .footer1{
 
   .wa img, .footbtn img{
     width: 50px;
+    height: auto;
     filter: drop-shadow(1px 1px 5px gray);
   }
 
