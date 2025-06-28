@@ -323,6 +323,7 @@ header .imghead{
 
 ul .check img{
     width: 20px;
+    height: auto;
 }
 
 ul li{
@@ -539,6 +540,7 @@ ul li{
 
   .price img{
     width: 20px;
+    height: auto;
   }
   
   .price span{
