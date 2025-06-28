@@ -71,6 +71,7 @@ nav{
 
 nav img{
     width: 200px;
+    height: auto;
 }
 nav span{
     color: white;
@@ -236,6 +237,7 @@ header .imghead{
 
 .bannerimg{
   width: 100%;
+  height: auto;
   transform: translateY(10px);
 }
 
@@ -348,6 +350,7 @@ ul li{
     
     .video-thumbnail img {
       width: 100%;
+      height: auto;
       border-radius: 10px;
       box-shadow: 1px 1px 5px rgb(65, 65, 65);
     }
@@ -423,6 +426,7 @@ ul li{
 .certifiedinner img{
     border-radius: 12px;
     width: 100%;
+    height: auto;
 }
 
 /* ////Lectures */
@@ -969,6 +973,7 @@ footer .footer1{
 
   .footer1 .logof{
     width: 200px;
+    height: auto;
   }
 
   .social{
