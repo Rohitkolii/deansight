@@ -264,6 +264,7 @@ header .imghead{
 
 .imgheadsquare img{
   width: 40px;
+  height: auto;
   filter: grayscale(9px);
 }
 
